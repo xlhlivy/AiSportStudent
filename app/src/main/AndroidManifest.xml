@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yelai.wearable">
+
+    <!-- 获取GSM网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许获取Wi-Fi网络状态改变信息 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读取手机状态 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- SD 卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+
+    <!--<application-->
+        <!--android:name=".App"-->
+        <!--android:allowBackup="true"-->
+        <!--android:icon="@mipmap/xdroid_logo_128"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:largeHeap="true"-->
+        <!--android:supportsRtl="true"-->
+        <!--android:theme="@style/AppTheme.NoActionBar">-->
+
+        <!--&lt;!&ndash;android:theme="@style/AppTheme">&ndash;&gt;-->
+
+
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <receiver
+            android:name=".ui.sport.StepReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <!--<activity-->
+            <!--android:name=".ui.HomeActivity"-->
+            <!--android:screenOrientation="portrait">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!-- 声明service组件 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!-- AK鉴权 -->
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="BzXvaN6f7f3E8uSLfVvB8fRojuQghEuH" />  <!-- http://lbsyun.baidu.com/apiconsole/key -->
+
+
+        <activity
+            android:theme="@style/AppTheme.NoActionBar.FullScreen"
+            android:name=".ui.SplashActivity"
+            android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.LoginActivity"/>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.RegisterActivity"/>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.IdentifyBindActivity"/>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.GenderBirthdayActivity"/>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.HeightWeightActivity"/>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.SportStatusActivity"/>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.login.SportGoalActivity"/>
+
+
+
+
+        <activity android:name=".ui.day.GymActivity"/>
+        <activity android:name=".ui.day.DaySportDetailActivity"/>
+        <activity android:name=".ui.day.DayBehaveDetailActivity"/>
+        <activity android:name=".ui.day.DayStatusDetailActivity"/>
+
+        <activity android:name=".ui.login.ForgetPasswordActivity"/>
+        <activity android:name=".ui.mine.ModifyPasswordActivity"/>
+
+
+
+        <activity android:name=".ui.course.SearchActivity"/>
+        <activity android:name=".ui.course.CourseDetailActivity"/>
+        <activity android:name=".ui.course.CourseActivity"/>
+
+        <activity android:name=".ui.discovery.DiscoveryDetailActivity"/>
+
+        <activity android:name=".ui.sport.SportTypeChoiceActivity"/>
+
+        <activity android:name=".ui.sport.SportRunWithoutMapActivity"/>
+
+        <activity android:name=".ui.day.ScanActivity"/>
+
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.sport.OtherSportActivity"/>
+
+        <activity android:theme="@style/AppTheme.NoActionBar.FullScreen" android:name=".ui.sport.SportRunWithMapActivity"/>
+
+
+        <activity android:name=".ui.mine.DeviceActivity"/>
+        <activity android:name=".ui.mine.SettingActivity"/>
+        <activity android:name=".ui.mine.SportHistoryActivity"/>
+        <activity android:name=".ui.mine.SportHistoryDetailActivity"/>
+        <activity android:name=".ui.mine.PhysiqueActivity"/>
+        <activity android:name=".ui.mine.BodyInfoActivity"/>
+        <activity android:name=".ui.mine.PhysiqueDetailActivity"/>
+
+
+        <activity android:name=".ui.HomeActivity"/>
+        <activity android:name=".ui.AboutActivity" />
+        <activity android:name=".base.WebActivity" />
+
+
+
+        <service
+            android:name=".step.StepService"
+            android:priority="1000">
+            <intent-filter>
+                <!-- 系统启动完成后会调用-->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".step.pedometer.StepsDetectService"
+            android:priority="1000"
+            android:process="com.yelai.wearable.step..pedometer.StepsDetectService">
+            <intent-filter>
+                <!-- 系统启动完成后会调用-->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+        
+        <service android:name=".ui.sport.BackGroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+    </application>
+
+</manifest>

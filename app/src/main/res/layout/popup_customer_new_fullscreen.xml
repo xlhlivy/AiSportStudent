@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="60dp"
+        android:background="@drawable/dialog_custom_bg">
+
+        <TextView
+            android:id="@+id/hit"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/black"
+            android:text="提示"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@+id/hit"
+            android:id="@+id/title"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="重要提示"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_height="2px"
+            android:background="@color/grey"
+            android:id="@+id/line"
+            android:layout_below="@id/title"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"/>
+
+        <TextView
+            android:id="@+id/tv_create"
+            android:textSize="14sp"
+            android:text="好的"
+            android:gravity="center"
+            android:textColor="@color/tab_text_selected"
+            android:layout_below="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

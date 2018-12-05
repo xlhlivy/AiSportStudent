@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="160dp"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+
+    android:background="@color/white">
+
+    <View android:layout_height="0dp" android:layout_width="match_parent" android:layout_weight="1"/>
+
+    <TextView
+        tools:text="定位服务已关闭"
+        android:textStyle="bold"
+        android:id="@+id/tv_title"
+        android:textColor="@color/textBlack"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        tools:text="您需要打开定位权限\n才可以获取到您的位置进行考勤。"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textBlack"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <View android:layout_height="0dp" android:layout_width="match_parent" android:layout_weight="1"/>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=" 取消 "
+            android:background="@drawable/button_drawable"
+            android:textColor="@color/btn_blue"/>
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="fill_parent"
+            android:background="@color/grey" />
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=" 设置 "
+            android:background="@drawable/button_drawable"
+            android:textColor="@color/btn_blue"/>
+    </LinearLayout>
+
+</LinearLayout>

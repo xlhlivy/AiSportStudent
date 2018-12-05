@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_gravity="bottom"
+              android:background="@color/background_my_material_light">
+
+    <EditText
+        android:layout_toLeftOf="@id/btnSend"
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@null"
+        android:gravity="top"
+        android:layout_margin="10dp"
+        android:hint="添加评论..."
+        android:textColorHint="@color/textHint"
+        android:textSize="17sp"/>
+
+
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/btnSend"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/course_icon_send"
+        android:tint="@color/tab_text_selected"
+        android:tintMode="multiply"/>
+</RelativeLayout>

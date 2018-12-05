@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+android:id/background"
+        android:drawable="@drawable/day_icon_rating_grey">
+    </item>
+    <item
+        android:id="@+android:id/progress"
+        android:drawable="@drawable/day_icon_rating_orange">
+    </item>
+
+</layer-list>

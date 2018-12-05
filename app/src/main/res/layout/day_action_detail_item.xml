@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="26dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="@drawable/day_detail_white_background_normal"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="120dp">
+
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
+
+
+                <com.yelai.wearable.widget.ArcProgress
+                    android:layout_centerInParent="true"
+                    android:id="@+id/apBlue1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:arc_stroke_width="4dp"
+                    app:arc_text_color="@android:color/transparent"
+                    app:arc_unfinished_color="#eeeeee"
+                    app:arc_finished_color="@color/tab_text_selected"
+                    app:arc_progress="80"
+                    app:arc_angle="270"/>
+
+
+                <TextView
+                    android:id="@+id/tvProgress"
+                    android:layout_centerInParent="true"
+                    tools:text="80"
+                    android:textSize="34dp"
+                    android:textAppearance="@style/TextAppearance.FontPath"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_toRightOf="@id/tvProgress"
+                    android:layout_alignBaseline="@id/tvProgress"
+                    android:id="@+id/tvProgressSymbol"
+                    android:text="%"
+                    android:textSize="16dp"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+                <TextView
+                    android:id="@+id/tvHit"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="有效运动时间"
+                    android:textSize="13dp"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/tvTxt1"
+                    android:layout_centerHorizontal="true"
+                    tools:text="80"
+                    android:textSize="23dp"
+                    android:textAppearance="@style/TextAppearance.FontPath"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvTxt2"
+                    android:layout_centerHorizontal="true"
+                    tools:text="剩余40分钟"
+                    android:textSize="10dp"
+                    android:textColor="#6d819c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/tvTxt3"
+                    android:layout_centerHorizontal="true"
+                    tools:text="80"
+                    android:textSize="23dp"
+                    android:textAppearance="@style/TextAppearance.FontPath"
+                    android:textColor="@color/text_black_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvTxt4"
+                    android:layout_centerHorizontal="true"
+                    tools:text="剩余40分钟"
+                    android:textSize="10dp"
+                    android:textColor="#6d819c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+
+            android:gravity="end"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/day_icon_help"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp" />
+
+                        <ImageView
+                            android:layout_marginLeft="18dp"
+                            android:src="@drawable/day_icon_chart"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/tvTxt5"
+                            android:layout_centerHorizontal="true"
+                            tools:text="80"
+                            android:textSize="23dp"
+                            android:textAppearance="@style/TextAppearance.FontPath"
+                            android:textColor="@color/text_black_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvTxt6"
+                            android:textAppearance="@style/TextAppearance.FontPath"
+                            tools:text="分钟"
+                            android:textSize="10dp"
+                            android:textColor="#c7cee1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTxt7"
+                    tools:text="剩余40分钟"
+                    android:textSize="10dp"
+                    android:textColor="#6d819c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
+
